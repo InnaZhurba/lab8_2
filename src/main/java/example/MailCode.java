@@ -20,7 +20,7 @@ public enum MailCode {
         String text = Read();
         // Inject client data
         // Return text
-        return "";
+        return text;
     }
     private String Read(){
         File file = new File(filename+".txt");

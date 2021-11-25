@@ -5,7 +5,7 @@ import lombok.Setter;
 
 @Getter  @Setter
 public class Client {
-    //@Template(key = "%AGE%")
+    @Template(key = "%AGE%")
     private int ID;
     private String name;
     private int age;
@@ -28,8 +28,8 @@ public class Client {
 
     //public Client.Client(){id = ClientGenerator.generateID();LinkedList<Integer> arr = new LinkedList
 
-    public void create(int ID, String name, int age, Gender sex){
-        setID(ID);
+    public void create(String name, int age, Gender sex){
+        //setID(ID);
         setName(name);
         setAge(age);
         setSex(sex);

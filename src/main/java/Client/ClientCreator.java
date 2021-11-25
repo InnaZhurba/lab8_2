@@ -9,6 +9,6 @@ public class ClientCreator {
     }
     public void CreateClient(String name, int age, Gender sex){
         clients[ID]=new Client();
-        clients[ID].create(ID,name,age,sex);
+        clients[ID].create(name,age,sex);
     }
 }

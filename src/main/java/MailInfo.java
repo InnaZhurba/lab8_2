@@ -18,4 +18,9 @@ public class MailInfo {
             text = text.replace(key,map.get(key));
         return text;
     }
+    public String getEmail(){
+        if(client==null)
+            return null;
+        return client.getEmail();
+    }
 }
