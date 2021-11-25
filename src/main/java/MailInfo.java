@@ -1,5 +1,4 @@
 import Client.Client;
-import example.MailCode;
 import lombok.Getter;
 import lombok.Setter;
 

@@ -1,5 +1,5 @@
 package Client;
 
-enum Gender {
+public enum Gender {
     MALE,FEMALE
 }

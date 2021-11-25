@@ -12,14 +12,6 @@ public class Client {
     private Gender sex;
     private String email;
 
-    /*public static class ClientIDGenerator{
-        private static int counter =0;
-        public static int generate(){
-            counter++;
-            return counter;
-        }
-    }*/
-
     private static int counter =0;
     public Client(){
         counter++;
@@ -28,10 +20,19 @@ public class Client {
 
     //public Client.Client(){id = ClientGenerator.generateID();LinkedList<Integer> arr = new LinkedList
 
-    public void create(String name, int age, Gender sex){
+    public void create(String name, int age, Gender gender){
         //setID(ID);
         setName(name);
         setAge(age);
-        setSex(sex);
+        setSex(gender);
     }
 }
+
+
+    /*public static class ClientIDGenerator{
+        private static int counter =0;
+        public static int generate(){
+            counter++;
+            return counter;
+        }
+    }*/

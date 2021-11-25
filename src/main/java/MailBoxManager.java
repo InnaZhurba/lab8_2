@@ -4,7 +4,7 @@ public class MailBoxManager {
     public MailBoxManager(MailBoxLib mailBoxLib){
         this.mailBoxLib = mailBoxLib;
     }
-    public void  sendNotifications(){
-        mailBoxLib.sendAll();
+    public boolean  sendNotifications(){
+        return mailBoxLib.sendAll();
     }
 }

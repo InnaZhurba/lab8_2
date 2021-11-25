@@ -1,4 +1,3 @@
-package example;
 import lombok.SneakyThrows;
 
 import java.io.File;  // Import the File class
@@ -17,13 +16,26 @@ public enum MailCode {
     @SneakyThrows
     public String generateText() {
         // Read file
-        String text = Read();
         // Inject client data
         // Return text
-        return text;
+        return Read2();
     }
+     private String Read2(){
+         File file = new File(filename);
+         StringBuilder fileContents = new StringBuilder((int)file.length());
+
+         try (Scanner scanner = new Scanner(file)) {
+             while(scanner.hasNextLine()) {
+                 fileContents.append(scanner.nextLine() + System.lineSeparator());
+             }
+             return fileContents.toString();
+         } catch (FileNotFoundException e) {
+             e.printStackTrace();
+         }
+         return fileContents.toString();
+     }
     private String Read(){
-        File file = new File(filename+".txt");
+        File file = new File(filename);
         StringBuilder str = new StringBuilder();
         try {
 
